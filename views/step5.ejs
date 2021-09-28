@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Include Head -->
+        <%- include("./partials/head") %>
+    </head>
+    <body>
+        <!-- Include NavBar -->
+        <%- include("./partials/nav") %>
+
+        <div class="container container-fluid mt-4" style="width: 50%;">
+            
+
+            <form>
+                <div class="step step-4" style="display: block;">
+                    <h3 class="mb-4 mt-4" style="text-align: center;">Step 5 of 8: Appointment Preference</h3>
+
+                    <div class="container mb-4">
+                        <div class="jumbotron bg-light" style="border-radius: 30px;">
+                          <div class="row">
+                            <div class="col-sm-2">
+                              <!--Info Icon-->
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                              </svg>
+                              <!--Icon-->
+                            </div>
+                            <div class="col ">
+                              <p>We will attempt to accommodate your appointment preferrence, subject to availability</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <p>Choose from the following options for your appointment:</p>
+                    <div>
+                        <p><b>Would you prefer to be vaccinated on weekday/weekend?</b></p>
+                        <div class="form-check-inline">
+                            <input class="form-check-input" type="radio" name="weekdayRadio" id="weekdayButton">
+                            <label class="form-check-label" for="weekdayButton">
+                                Weekday
+                            </label>
+                        </div>
+
+                        <div class="form-check-inline">
+                            <input class="form-check-input" type="radio" name="weekendRadio" id="weekendButton">
+                            <label class="form-check-label" for="weekdendButton">
+                                Weekend
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="mt-4"><b>Would you prefer to be vaccinated in the morning or the afternoon?</b></p>
+                        <div class="form-check-inline">
+                            <input class="form-check-input" type="radio" name="morningRadio" id="morningButton">
+                            <label class="form-check-label" for="morningButton">
+                                Morning
+                            </label>
+                        </div>
+
+                        <div class="form-check-inline">
+                            <input class="form-check-input" type="radio" name="afternoonRadio" id="afternoonButton">
+                            <label class="form-check-label" for="afternoonButton">
+                                Afternoon
+                            </label>
+                        </div>
+                    </div>
+
+                   
+                    
+                    <div>
+                        <button class="btn btn-outline-primary mt-4" type="button" style="border-radius: 30px;">Go back</button>
+                        <button class="btn btn-outline-primary mt-4" type="submit" style="border-radius: 30px;" >Next step</button>
+                    </div>
+    
+                </div>
+            </form>
+
+            <!-- Include Footer -->
+        <%- include("./partials/footer") %>
+
+        <script>
+            function nextStep(){
+              console.log('Next Step 4 loading!!!')
+            }
+          </script>
+        
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Include Head -->
+        <%- include("./partials/head") %>
+    </head>
+    <body>
+        <!-- Include NavBar -->
+        <%- include("./partials/nav") %>
+
+        <div class="container container-fluid" style="width: 50%;">
+
+            <form>
+                <div class="step step-3" style="display: block;">
+                    <h3 class="mb-4 mt-4" style="text-align: center;">Step 3 of 8: Contact Details</h3>
+                    <div>
+                        <input type="text" class="form-control mb-3" id="validationServer06" placeholder="Mobile Number" required>
+                        <p style="color: crimson;">Please ensure that mobile number is correct as we will use this to...</p>
+                    </div>
+    
+                    <div>
+                        <input type="email" class="form-control " id="validationServer07" placeholder="E-mail address">
+                        <p>E-mail address is optional</p>
+                    
+                    </div>
+                    
+                    <div>
+                        <button class="btn btn-outline-primary mt-4" type="button" style="border-radius: 30px;">Go back</button>
+                        <button class="btn btn-outline-primary mt-4" type="submit" style="border-radius: 30px;" onsubmit="nextStep()" >Next step</button>
+                    </div>
+    
+                </div>
+            </form>
+
+            <!-- Include Footer -->
+        <%- include("./partials/footer") %>
+
+        <script>
+            function nextStep(){
+              console.log('Next Step 4 loading!!!')
+            }
+          </script>
+        
+    </body>
+</html>

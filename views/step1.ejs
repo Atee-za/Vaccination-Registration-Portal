@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Include Head -->
+        <%- include("./partials/head") %>
+    </head>
+    <body>
+        <!-- Include NavBar -->
+        <%- include("./partials/nav") %>
+
+        <div class="container container-fluid" style="width: 50%;">
+
+            <form>
+                <div class="step step-1" style="display: block;">
+                    <h3 class="mb-4 mt-4" style="text-align: center;">Step 1 of 8: Method of Identification</h3>
+                    <div class="container mb-3">
+                        <div>
+                          <button type="button" class="btn btn-outline-dark container-fluid" style="border-radius: 30px;">Use South African ID</button>
+                        </div>
+                    </div>
+                    <div class="container mb-3">
+                        <div>
+                            <button type="button" class="btn btn-outline-dark container-fluid" style="border-radius: 30px;">Use Passport</button>
+                        </div>
+                    </div>
+                    <div class="container mb-5">
+                        <div>
+                            <button type="button" class="btn btn-outline-dark container-fluid" style="border-radius: 30px;">Use Asylum Seeker / Refugee Number</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <button class="btn btn-outline-primary mt-4" type="button" style="border-radius: 30px;">Go back</button>
+                </div>
+            </form>
+
+            <!-- Include Footer -->
+        <%- include("./partials/footer") %>
+
+        <script>
+            function nextStep(){
+              console.log('Next Step 4 loading!!!')
+            }
+          </script>
+        
+    </body>
+</html>
