@@ -40,8 +40,15 @@
       <div class="container" style="margin-top: 30px">
         <div class="row">
           <div class="col-sm-4 container-fluid">
+<<<<<<< HEAD
             <div class="input-group "> <!-- Question -->
               <button type="button" class="btn btn-outline-secondary">Are you 18 years or older?</button>
+=======
+            <div class="input-group ">
+              <!--  
+                THIS WILL BE REMOVED SOON 
+                <button type="button" class="btn btn-outline-secondary">Are you 18 years or older?</button>
+>>>>>>> b16557a5ac70f5b194b6a45b279033031fed4894
               <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="true">
                 <span class="visually-hidden">Toggle Dropdown</span>
               </button>
@@ -49,24 +56,41 @@
                 <li> <input type="checkbox" id="Yes" name="Legal Age" required> Yes </li>
                 <li> <input type="checkbox" id="No" name="Legal Age" required> No </li>
               </ul>
-            </div>
+            </div> --> 
+            <label for="age">Are you 18 years or older?</label>
+            <select name="age" id="age" style="width: 250px;">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
             <p class="navbar-text">Tap the box above to make a choice</p>
+
+            <div class="container mb-5">
+              <div>
+                <button style="width: auto;" type="button" class="btn btn-outline-primary container-fluid" onclick="register()">Register For Vaccination</button>
+              </div>
+            </div>
+
           </div>
         </div>
+        
       </div>
     </section>
 
+<<<<<<< HEAD
     <div class="container mb-5">
       <div> <!-- Button -->
         <button type="button" class="btn btn-outline-primary container-fluid" >Register For Vaccination</button>
       </div>
     </div>
   </form>
+=======
+  
+>>>>>>> b16557a5ac70f5b194b6a45b279033031fed4894
 
   <!-- 
     <script>
       function register(){
-        console.log('register!!!')
+        console.log(document.getElementById('age'));
       }
     </script>-->
     
