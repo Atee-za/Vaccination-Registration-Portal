@@ -1,8 +1,32 @@
 const express = require('express');
+const mongoose = require('mongoose')
+const Blog = require('./models/blog');
+
 const app = express();
 
-app.set('view engine', 'ejs');
+//mongo db link
+const dbURI = 'mongodb+srv://VRPuser:vrp654word@vrp.ivfk4.mongodb.net/vrp-set?retryWrites=true&w=majority';
+mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
+  .then((result) => app.listen(3000))
+  .catch((err) => console.log(err));
 
+app.get('/add-blog', (req, res) => {
+  const blog = new Blog({
+    title: 'testing01',
+    name: 'Basic Test',
+    age: '1'
+  });
+
+  blog.save()
+    .then((result) => {
+      res.send(result)
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}); 
+
+  app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
   res.render('index');
