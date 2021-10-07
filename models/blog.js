@@ -11,3 +11,12 @@ const blogSchema = new Schema({
 const Blog = mongoose.model('Blog', blogSchema);
 
 module.exports = Blog;
+
+
+const step1Schema = new Schema({
+    id: {type: String, required: true},
+    passport: {type: String, required: false},
+    RefugeeNum: {type: String, required: false},
+}, {timestamps: true});
+
+
