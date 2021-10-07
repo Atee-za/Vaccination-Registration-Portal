@@ -12,7 +12,6 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 
 //mongo db link 
-DELETE THIS
 /*const dbURI = 'mongodb+srv://athi:athi2021@cluster0.ious3.mongodb.net/Vaccination Registration Portal?retryWrites=true&w=majority';
 mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
   .then((result) => app.listen(3000))
