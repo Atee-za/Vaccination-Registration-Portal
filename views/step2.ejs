@@ -51,13 +51,12 @@
                     </div>
                     
                 </div>
-
                 
             </form>
             <script>
                 function nextStep(){
-                    const thisForm = document.getElementById('step1-form');
-                    if(thisForm.oninvalid == true){
+                    const thisForm = document.querySelector('step1-form');
+                    if(thisForm){
                         console.log('Invailid!!!');
                     }
                     else{
