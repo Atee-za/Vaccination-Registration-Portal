@@ -14,19 +14,21 @@
                 <div class="step step-3" style="display: block;">
                     <h3 class="mb-4 mt-4" style="text-align: center;">Step 3 of 8: Contact Details</h3>
                     <div>
-                        <input type="text" class="form-control mb-3" id="validationServer06" placeholder="Mobile Number" required>
-                        <p style="color: crimson;">Please ensure that mobile number is correct as we will use this to...</p>
+                        <input type="text" class="form-control" id="validationServer06" placeholder="Mobile Number" required>
+                        <p class=" container-fluid mb-3" style="color: crimson;">Please ensure that mobile number is correct as we will use this to communicate with you during your COVID-19 vaccination process</p>
                     </div>
     
                     <div>
                         <input type="email" class="form-control " id="validationServer07" placeholder="E-mail address">
-                        <p>E-mail address is optional</p>
+                        <p class=" container-fluid">E-mail address is optional</p>
                     
                     </div>
                     
                     <div>
-                        <button class="btn btn-outline-primary mt-4" type="button" style="border-radius: 30px;">Go back</button>
-                        <button class="btn btn-outline-primary mt-4" type="submit" style="border-radius: 30px;" onsubmit="nextStep()" >Next step</button>
+                        <a href="/step2" class="btn btn-outline-secondary mt-4" role="button" style="border-radius: 30px; color: rgb(6, 131, 248);">Go back</a>  
+                        <!--<button class="btn btn-outline-primary mt-4" type="button" style="border-radius: 30px;">Go back</button>-->
+                        <a href="/step4" class="btn btn-outline-secondary mt-4" type="submit" role="button" style="border-radius: 30px; color: rgb(6, 131, 248);">Next step</a>
+                        <!--<button class="btn btn-outline-primary mt-4" type="submit" style="border-radius: 30px;" onsubmit="nextStep()" >Next step</button>-->
                     </div>
     
                 </div>
