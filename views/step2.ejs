@@ -11,27 +11,36 @@
 
         <div class="container container-fluid" style="width: 50%;">
 
+<!--
+            <form id="step1-form" action="/personalInfo" method="POST">
+
             <form id="step2-form">
+-->
                 <div class="step step-2" >
                     <h3 class="mb-4 mt-4" style="text-align: center;">Step 2 of 8: General Information</h3>
                     <div>
-                        <input type="text" class="form-control mb-3" id="validationServer01" placeholder="ID Number" required>
+                        <input type="text" class="form-control mb-3" id="validationServer01" placeholder="ID Number" required name="ID_Number">
                     </div>
                     
                     <div>
-                        <input type="text" class="form-control mb-3" id="validationServer02" placeholder="Passport (Optional)" >
+                        <input type="text" class="form-control mb-3" id="validationServer02" placeholder="Passport (Optional)" name="Passport" >
                     </div>
 
                     <div>
+<!--
+                        <input type="date" class="form-control mb-3" id="validationServer03" required name="Dob" >
+                    </div>
+
                         <input type="date" class="form-control mb-3" id="validationServer03" placeholder="Date of birth" required >
+-->
                     </div>
 
                     <div>
-                        <input type="text" class="form-control mb-3" id="validationServer04" placeholder="First Name(s)" required>
+                        <input type="text" class="form-control mb-3" id="validationServer04" placeholder="First Name(s)" required name="Name">
                     </div>
 
                     <div>
-                        <input type="text" class="form-control mb-3" id="validationServer05" placeholder="Surname" required>
+                        <input type="text" class="form-control mb-3" id="validationServer05" placeholder="Surname" required name="Surname">
                     </div>
 
                     <div class="mb-3 container-fluid" style="margin-left: auto;">
