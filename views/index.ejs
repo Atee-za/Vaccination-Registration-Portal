@@ -16,21 +16,21 @@
       <div class="container">
         <div class="jumbotron bg-light" style="border-radius: 30px;">
           <div class="row">
-            <div class="col-sm-2">
+            <div class="col-md-2">
               <!--Info Icon-->
               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                 <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
               </svg>
               <!--Icon-->
-            </div>
+            </div>  
             <div class="col ">
-              <h4>This is the official South African COVID-19 Vaccination Programme portal.</h4>
+              <h4> This is the official South African COVID-19 Vaccination Programme portal.</h4>
               <ul>
-                <li>Vaccination is voluntary and no payments is..</li>
-                <li>Everyone who registered will be...</li>
-                <li>Registration is...</li>
-                <li>We are moving down the age groups as...</li>
+                <li>Vaccination is <b>voluntary and no payments is required.</b></li>
+                <li>Everyone who registers will be offered vaccination. <b>When it is your turn, you will receive an SMS </b>with the date, time and place for your vaccination.</li>
+                <li>Registration is now open for everybody <b>18 years and older.</b></li>
+                <li>We are moving down the age groups as quickly as we can.</li>
               </ul>
             </div>
           </div>
@@ -42,19 +42,9 @@
         <div class="row">
           <div class="col-sm-4 container-fluid">
             <div class="input-group ">
-              <!--  
-                THIS WILL BE REMOVED SOON 
-                <button type="button" class="btn btn-outline-secondary">Are you 18 years or older?</button>
-              <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="true">
-                <span class="visually-hidden">Toggle Dropdown</span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Yes</a></li>
-                <li><a class="dropdown-item" href="#">No</a></li>
-              </ul>
-            </div> --> 
+              
             <label for="age">Are you 18 years or older?</label>
-            <select name="age" id="age" style="width: 250px;">
+            <select name="age" id="age"  style="width: 750px; height: 45px;">
               <option value="yes">Yes</option>
               <option value="no">No</option>
             </select>
@@ -62,7 +52,11 @@
 
             <div class="container mb-5">
               <div>
+<!--
                 <button style="width: auto;" type="submit" class="btn btn-outline-primary container-fluid" onclick="register()">Register For Vaccination</button>
+
+                <a href="/step1" class="btn btn-outline-secondary container-fluid" role="button" style="width: auto; border-radius: 30px; color: rgb(6, 131, 248);">Register For Vaccination</a>
+-->
               </div>
             </div>
 
@@ -73,11 +67,9 @@
       </form>
     </section>
 
-  
-
     <script>
       function register(){
-        console.log(document.getElementById('age'));
+        
       }
     </script>
     

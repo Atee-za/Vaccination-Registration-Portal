@@ -8,10 +8,10 @@
         <!-- Include NavBar -->
         <%- include("./partials/nav") %>
 
-        <div class="container container-fluid" style="width: 50%;">
+        <div class="container container-fluid" style="width: 60%;">
 
             <form>
-                <div class="step step-6" style="display: block;">
+                <div class="step step-6">
                     <h3 class="mb-4 mt-4" style="text-align: center;">Step 6 of 8: Medical Aid</h3>
 
                     <div class="container mb-4">
@@ -26,28 +26,32 @@
                               <!--Icon-->
                             </div>
                             <div class="col ">
-                                <p>Please provide you Medical Aid details</p>
-                                <p>It is important to note that your Medical Aid will pay the Government directly...</p>
+                                <p>Please provide you Medical Aid details.</p>
+                                <p>It is important to note that your Medical Aid will pay the Government directly for this vaccine. This will <b>not influence your day-to-day, savings or any other benefit.</b> You will not be required to pay for this vaccine and no co-payment/levy will be required.</p>
                             </div>
                           </div>
                         </div>
                     </div>
 
+                    <p>Do you belong to a Medical Aid?</p>
                     <div class="container mb-3">
                         <div>
-                          <button type="button" class="btn btn-outline-primary container-fluid" style="border-radius: 30px;">Yes</button>
+                          <a href="/step7" class="btn btn-outline-secondary container-fluid" role="button" style="border-radius: 30px; color: rgb(6, 131, 248);">Yes</a>  
+                          <!--<button type="button" class="btn btn-outline-primary container-fluid" style="border-radius: 30px;">Yes</button>-->
                         </div>
                     </div>
                     <div class="container mb-3">
                         <div>
-                            <button type="button" class="btn btn-outline-dark container-fluid" style="border-radius: 30px;">No</button>
+                          <a href="/step8" class="btn btn-outline-secondary container-fluid" type="submit" role="button" style="border-radius: 30px;">No</a>
+                          <!--<button type="button" class="btn btn-outline-dark container-fluid" style="border-radius: 30px;">No</button>-->
                         </div>
                     </div>
                     
                 </div>
 
                 <div>
-                    <button class="btn btn-outline-primary mt-4" type="button" style="border-radius: 30px;">Go back</button>
+                  <a href="/step5" class="btn btn-outline-secondary mt-4" role="button" style="border-radius: 30px; color: rgb(10, 140, 216);">Go back</a>  
+                  <!--<button class="btn btn-outline-primary mt-4" type="button" style="border-radius: 30px;">Go back</button>-->
                 </div>
             </form>
 
