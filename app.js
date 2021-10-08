@@ -103,18 +103,22 @@ app.get('/step4', (req, res) => {
   res.render('step4');
 });
 
+//step 5 page
 app.get('/step5', (req, res) => {
   res.render('step5');
 }); 
 
+//step 6 page
 app.get('/step6', (req, res) => {
   res.render('step6');
 });
 
+//step 7 page
 app.get('/step7', (req, res) => {
   res.render('step7');
 }); 
 
+//step 8 page
 app.get('/step8', (req, res) => {
   res.render('step8');
 });
