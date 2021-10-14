@@ -1,9 +1,14 @@
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose')
-const Blog = require('./models/blog');
-const Blog2 = require('./models/personalInfo');
-const Blog3 = require('./models/contactBlog');
+const Blog = require('./models/B0_Age');
+
+const Blog2 = require('./models/B2_Personal');
+const Blog3 = require('./models/B3_Contact');
+const Blog4 = require('./models/B4_Address');
+const Blog5 = require('./models/B5_Appointment');
+const Blog6 = require('./models/B6_Aid.js');
+const Blog7 = require('./models/B7_M_Aid');
 
 const app = express();
 
@@ -52,7 +57,7 @@ app.get('/', (req, res) => {
   res.render('index');
 }); 
 
-app.post('/blog', (req, res) => {
+app.post('/input0', (req, res) => {
   const ansB = new Blog(req.body);
 
   ansB.save()
@@ -66,7 +71,7 @@ app.get('/step1', (req, res) => {
   res.render('step1');
 });
 
-app.post('/step1', (req, res) => {
+app.post('/input1', (req, res) => {
   res.redirect('/step2');
 })
 
@@ -75,7 +80,7 @@ app.get('/step2', (req, res) => {
   res.render('step2');
 });
 
-app.post('/personalInfo', (req, res) => {
+app.post('/input2', (req, res) => {
   const pInfo = new Blog2(req.body);
 
   pInfo.save()
@@ -89,7 +94,7 @@ app.get('/step3', (req, res) => {
   res.render('step3');
 });
 
-app.post('/contactBlog', (req, res) => {
+app.post('/input3', (req, res) => {
   const cInfo = new Blog3(req.body);
 
   cInfo.save()
@@ -103,20 +108,69 @@ app.get('/step4', (req, res) => {
   res.render('step4');
 });
 
+app.post('/input4', (req, res) => {
+  const aInfo = new Blog4(req.body);
+
+  aInfo.save()
+    .then((result) =>{
+      res.redirect('/step5')
+    })
+})
+
 //step 5 page
 app.get('/step5', (req, res) => {
   res.render('step5');
 }); 
+
+app.post('/input5', (req, res) => {
+  const apoint = new Blog5(req.body);
+
+  apoint.save()
+    .then((result) =>{
+      res.redirect('/step6')
+    })
+})
 
 //step 6 page
 app.get('/step6', (req, res) => {
   res.render('step6');
 });
 
+app.post('/input6Y', (req, res) => {
+  const AidInfo = new Blog6({
+    Medical_Aid: 'Yes',
+  }); 
+
+  AidInfo.save()
+    .then((result) =>{
+      res.redirect('/step7')
+    })
+})
+
+app.post('/input6N', (req, res) => {
+  const AidInfo = new Blog6({
+    Medical_Aid: 'No',
+  }); 
+
+  AidInfo.save()
+    .then((result) =>{
+      res.redirect('/step8')
+    })
+})
+
 //step 7 page
 app.get('/step7', (req, res) => {
   res.render('step7');
 }); 
+
+app.post('/input7', (req, res) => {
+  const cInfo = new Blog7(req.body);
+
+  cInfo.save()
+    .then((result) =>{
+      res.redirect('/step8')
+    })
+})
 
 //step 8 page
 app.get('/step8', (req, res) => {
