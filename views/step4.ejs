@@ -11,7 +11,7 @@
         <div class="container container-fluid mt-4" style="width: 60%;">
             
 
-            <form>
+            <form action="/input4" method="POST">
                 <div class="step step-4" style="display: block;">
                     <h3 class="mb-4 mt-4" style="text-align: center;">Step 4 of 8: Address</h3>
 
@@ -37,7 +37,7 @@
                         <label for="provinces">Provinces</label>
                         <div class="row">
                             <div class="col-sm-12 container-fluid">
-                                <select name="provinces" id="provinces" style="width: 600px; height: 50px;">
+                                <select name="province" id="provinces" style="width: 600px; height: 50px;">
                                     <option value="wc">Western Cape</option>
                                     <option value="ec">Eastern Cape</option>
                                     <option value="nc">Northern Cape</option>
@@ -74,15 +74,13 @@
                     </div>
 
                     <div>
-                        <input type="text" class="form-control" id="validationServer02" placeholder="Address" >
+                        <input type="text" class="form-control" id="validationServer02" placeholder="Address" name="Address" >
                         <p class="container-fluid">Address is optional</p>
                     </div>
                     
                     <div>
                         <a href="/step3" class="btn btn-outline-secondary mt-4" role="button" style="border-radius: 30px; color: rgb(6, 131, 248);">Go back</a>  
-                        <!--<button class="btn btn-outline-primary mt-4" type="button" style="border-radius: 30px;">Go back</button>-->
-                        <a href="/step5" class="btn btn-outline-secondary mt-4" type="submit" role="button" style="border-radius: 30px; color: rgb(6, 131, 248);">Next step</a>
-                        <!--<button class="btn btn-outline-primary mt-4" type="submit" style="border-radius: 30px;" onsubmit="nextStep()" >Next step</button>-->
+                        <button class="btn btn-outline-primary mt-4" type="submit" style="border-radius: 30px;" >Next step</button>
                     </div>
     
                 </div>
@@ -91,11 +89,5 @@
             <!-- Include Footer -->
         <%- include("./partials/footer") %>
 
-        <script>
-            function nextStep(){
-              console.log('Next Step 4 loading!!!')
-            }
-          </script>
-        
     </body>
 </html>

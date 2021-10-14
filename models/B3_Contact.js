@@ -7,6 +7,6 @@ const contactI = new Schema({
 
 }, {timestamps: true});
 
-const Blog3 = mongoose.model('Blog3', contactI);
+const Blog3 = mongoose.model('B3_Contact_Info', contactI);
 
 module.exports = Blog3;

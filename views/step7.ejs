@@ -10,7 +10,7 @@
 
         <div class="container container-fluid mt-4" style="width: 60%;">
             
-            <form>
+            <form action="/input7" method="POST">
                 <div class="step step-4">
                     <h3 class="mb-4 mt-4" style="text-align: center;">Step 7 of 8: Medical Aid</h3>
 
@@ -33,32 +33,30 @@
                         </div>
                     </div>
 
-                    <p class="container-fluid">Please provide us with your accutrate Medical Aid details:</p>
+                    <p class="container-fluid">Please provide us with your accurate Medical Aid details:</p>
                    
                     <div class="container ">
                         <div class="row">
                           <div class="col-sm-12 container-fluid mb-4">
                                 <div class="input-group ">
-                                <select name="municipality" id="municipality" style="width: 650px; height: 50px;">
-                                    <option>Medical aid scheme name</option>
-                                    <option value="sc1">Scheme 1</option>
-                                    <option value="sc2">Scheme 2</option>
-                                    <option value="sc3">Scheme 3</option>
+                                <select name="Medical_Aid_Scheme" id="Medical Aid Scheme" style="width: 650px; height: 50px;">
+                                    <option>Medical Aid scheme name</option>
+                                    <option value="sc1"> GEMS </option>
+                                    <option value="sc2"> Scheme 2 </option>
+                                    <option value="sc3"> Scheme 3 </option>
                                 </select>
                             </div>
                         </div>
                     </div>
 
                     <div>
-                        <input type="text" class="form-control " id="validationServer07" placeholder="Medical aid number">
+                        <input type="text" class="form-control " id="validationServer07" placeholder="Medical aid number" name="Medical_Aid_Number">
                     </div>
                     
                     
                     <div>
                         <a href="/step6" class="btn btn-outline-secondary mt-4" role="button" style="border-radius: 30px; color: rgb(6, 131, 248);">Go back</a>  
-                        <!--<button class="btn btn-outline-primary mt-4" type="button" style="border-radius: 30px;">Go back</button>-->
-                        <a href="/step8" class="btn btn-outline-secondary mt-4" type="submit" role="button" style="border-radius: 30px; color: rgb(6, 131, 248);">Next step</a>
-                        <!--<button class="btn btn-outline-primary mt-4" type="submit" style="border-radius: 30px;" onsubmit="nextStep()" >Next step</button>-->
+                        <button class="btn btn-outline-primary mt-4" type="submit" style="border-radius: 30px;"> Next step </button>
                     </div>
     
                 </div>

@@ -11,7 +11,7 @@
         <div class="container container-fluid mt-4" style="width: 50%;">
             
 
-            <form>
+            <form action="/input5" method="POST">
                 <div class="step step-4" style="display: block;">
                     <h3 class="mb-4 mt-4" style="text-align: center;">Step 5 of 8: Appointment Preference</h3>
 
@@ -37,14 +37,14 @@
                     <div>
                         <p><b>Would you prefer to be vaccinated on weekday/weekend?</b></p>
                         <div class="form-check-inline">
-                            <input class="form-check-input" type="radio" name="weekdayRadio" id="weekdayButton">
+                            <input class="form-check-input" type="radio" name="days" id="DaysButton">
                             <label class="form-check-label" for="weekdayButton">
                                 Weekday
                             </label>
                         </div>
 
                         <div class="form-check-inline">
-                            <input class="form-check-input" type="radio" name="weekendRadio" id="weekendButton">
+                            <input class="form-check-input" type="radio" name="days" id="DaysButton">
                             <label class="form-check-label" for="weekdendButton">
                                 Weekend
                             </label>
@@ -54,15 +54,15 @@
                     <div>
                         <p class="mt-4"><b>Would you prefer to be vaccinated in the morning or the afternoon?</b></p>
                         <div class="form-check-inline">
-                            <input class="form-check-input" type="radio" name="morningRadio" id="morningButton">
+                            <input class="form-check-input" type="radio" name="session" id="SessionButton">
                             <label class="form-check-label" for="morningButton">
                                 Morning
                             </label>
                         </div>
 
                         <div class="form-check-inline">
-                            <input class="form-check-input" type="radio" name="afternoonRadio" id="afternoonButton">
-                            <label class="form-check-label" for="afternoonButton">
+                            <input class="form-check-input" type="radio" name="session" id="SessionButton">
+                            <label class="form-check-label" for="afternoonButton" >
                                 Afternoon
                             </label>
                         </div>
@@ -71,10 +71,8 @@
                    
                     
                     <div>
-                        <a href="/step4" class="btn btn-outline-secondary mt-4" role="button" style="border-radius: 30px; color: rgb(6, 131, 248);">Go back</a>  
-                        <!--<button class="btn btn-outline-primary mt-4" type="button" style="border-radius: 30px;">Go back</button>-->
-                        <a href="/step6" class="btn btn-outline-secondary mt-4" type="submit" role="button" style="border-radius: 30px; color: rgb(6, 131, 248);">Next step</a>
-                        <!--<button class="btn btn-outline-primary mt-4" type="submit" style="border-radius: 30px;" onsubmit="nextStep()" >Next step</button>-->
+                        <a href="/step4" class="btn btn-outline-secondary mt-4" role="button" style="border-radius: 30px; color: rgb(6, 131, 248);">Go back</a>
+                        <button class="btn btn-outline-primary mt-4" type="submit" style="border-radius: 30px;" >Next step</button>
                     </div>
     
                 </div>
@@ -83,11 +81,5 @@
             <!-- Include Footer -->
         <%- include("./partials/footer") %>
 
-        <script>
-            function nextStep(){
-              console.log('Next Step 4 loading!!!')
-            }
-          </script>
-        
     </body>
 </html>

@@ -7,9 +7,10 @@ const personalI = new Schema({
     Dob: {type: Date, required: true},
     Name: {type: String, required: true},
     Surname: {type: String, required: true},
+    gender:  {type: String, required: true},
 
 }, {timestamps: true});
 
-const personalInfo = mongoose.model('personalInfo', personalI);
+const personalInfo = mongoose.model('B2_Personal_Info', personalI);
 
 module.exports = personalInfo;
