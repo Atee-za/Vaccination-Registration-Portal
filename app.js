@@ -19,28 +19,6 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 
-//mongo db link 
-/*const dbURI = 'mongodb+srv://athi:athi2021@cluster0.ious3.mongodb.net/Vaccination Registration Portal?retryWrites=true&w=majority';
-mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
-  .then((result) => app.listen(3000))
-  .catch((err) => console.log("Connecting to MongoDB err"));
-
-app.get('/add-blog', (req, res) => {
-  const blog = new Blog({
-    title: 'testing01',
-    name: 'Basic Test',
-    age: '1'
-  }); 
-
-  blog.save()
-    .then((result) => {
-      res.send(result)
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});  */
-
 
   app.set('view engine', 'ejs');
 

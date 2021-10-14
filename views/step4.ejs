@@ -33,48 +33,33 @@
                         </div>
                     </div>
 
-                    <div class="container " style="margin-top: 30px">
-                        <label for="provinces">Provinces</label>
-                        <div class="row">
-                            <div class="col-sm-12 container-fluid">
-                                <select name="province" id="provinces" style="width: 600px; height: 50px;">
-                                    <option value="wc">Western Cape</option>
-                                    <option value="ec">Eastern Cape</option>
-                                    <option value="nc">Northern Cape</option>
-                                    <option value="gs">Gauteng</option>
-                                    <option value="mp">Mpumalanga</option>
-                                    <option value="fs">Free State</option>
-                                    <option value="kzn">KwaZulu Natal</option>
-                                    <option value="lm">Limpopo</option>
-                                    <option value="nw">North West</option>
-                                </select>
-                                <p class="navbar-text container-fluid">Select the province where you are</p>
-                            </div>
-                        </div>
+                    <div  class="container mb-3" style="margin-top: 30px;">
+                        <select required class="form-control " name="province" id="province" style="width: 100%; height: 50px;">
+                           <option value="" style="display: none;">Province</option>
+                           <option value="wc">Western Cape</option>
+                           <option value="ec">Eastern Cape</option>
+                           <option value="nc">Northern Cape</option>
+                           <option value="gs">Gauteng</option>
+                           <option value="mp">Mpumalanga</option>
+                           <option value="fs">Free State</option>
+                           <option value="kzn">KwaZulu Natal</option>
+                           <option value="lm">Limpopo</option>
+                           <option value="nw">North West</option>
+                        </select>
+                        <p class="navbar-text container-fluid">Select the province where you are</p>
                     </div>
 
-                    <div class="container mb-4">
-                        <div class="row">
-                          <div class="col-sm-12 container-fluid">
-                                <div class="input-group ">
-                                    <select name="municipality" id="municipality" style="width: 600px; height: 50px;">
-                                        <option value="mu">Municipality</option>
-                                        <option value="ec">Eastern Cape</option>
-                                        <option value="nc">Northern Cape</option>
-                                        <option value="gs">Gauteng</option>
-                                        <option value="mp">Mpumalanga</option>
-                                        <option value="fs">Free State</option>
-                                        <option value="kzn">KwaZulu Natal</option>
-                                        <option value="lm">Limpopo</option>
-                                        <option value="nw">North West</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="container-fluid mb-3" >
+                        <select required class="form-control " name="municipality" id="municipality" style="width: 100%; height: 50px;">
+                           <option value="" style="display: none;">Municipality</option>
+                           <option value="x">xxx</option>
+                           <option value="y">yyy</option>
+                           <option value="z">zzz</option>
+                           <option value="a">aaa</option>
+                        </select>
                     </div>
-
-                    <div>
-                        <input type="text" class="form-control" id="validationServer02" placeholder="Address" name="Address" >
+                    <div class="container mb-3" >
+                        <input type="text" class="form-control" id="validationServer02" placeholder="Address" name="address" >
                         <p class="container-fluid">Address is optional</p>
                     </div>
                     
