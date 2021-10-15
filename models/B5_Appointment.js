@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const blogSchema = new Schema({
-    weekdays: {type: Boolean, required: true},
-    morning: {type: Boolean, required: true},
+    appointment: {type: String, required: true},
+    session: {type: String, required: true},
 
 }, {timestamps: true});
 
