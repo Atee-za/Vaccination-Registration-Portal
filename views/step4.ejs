@@ -34,12 +34,12 @@
                     </div>
 
                     <div  class="container mb-3" style="margin-top: 30px;">
-                        <select required class="form-control " name="province" id="province" style="width: 100%; height: 50px;">
+                        <select required class="form-control " name="province" id="province" style="width: 100%; height: 50px;" onChange="changeMunicipality(this.value);">
                            <option value="" style="display: none;">Province</option>
                            <option value="wc">Western Cape</option>
                            <option value="ec">Eastern Cape</option>
                            <option value="nc">Northern Cape</option>
-                           <option value="gs">Gauteng</option>
+                           <option value="ga">Gauteng</option>
                            <option value="mp">Mpumalanga</option>
                            <option value="fs">Free State</option>
                            <option value="kzn">KwaZulu Natal</option>
@@ -52,10 +52,6 @@
                     <div class="container-fluid mb-3" >
                         <select required class="form-control " name="municipality" id="municipality" style="width: 100%; height: 50px;">
                            <option value="" style="display: none;">Municipality</option>
-                           <option value="x">xxx</option>
-                           <option value="y">yyy</option>
-                           <option value="z">zzz</option>
-                           <option value="a">aaa</option>
                         </select>
                     </div>
                     <div class="container mb-3" >
@@ -74,5 +70,28 @@
             <!-- Include Footer -->
         <%- include("./partials/footer") %>
 
+        <script>
+            var pronvicesByCategory = {
+            wc: ["City of Cape Town Metropolitan", "Cape Winelands District", "Central Karoo District", "Other"],
+            ec: ["Buffalo City Metropolitan", "Nelson Mandela Bay Metropolitan", "Other"],
+            nc: ["Frances Baard District", "Dikgatlong Local", "Magareng Local", "Phokwane Local", "Sol Plaatje Local", "John Taolo Gaetsewe District", " Ga-Segonyana Local", "Other"],
+            mp: ["Ehlanzeni District", "Bushbuckridge Local", "City of Mbombela Local", "Nkomazi Local", "Thaba Chweu Local", "Gert Sibande District", "Chief Albert Luthuli Local", "Other"],
+            fs: ["Mangaung Metropolitan", "Fezile Dabi District", "Mafube Local", "Lejweleputswa District", "Other"],
+            lm: ["Capricorn District", "Blouberg Local", "Mopani District", "Ba-Phalaborwa Local", "Other"],
+            nw: ["Bojanala Platinum District" ,"Kgetlengrivier Local" ,"Madibeng Local" ,"Moretele Local" ,"Moses Kotane Local" ,"Rustenburg Local" ,"Dr Kenneth Kaunda District", "Other"],
+            kzn: ["eThekwini", "Amajuba District", "Harry Gwala District", "Other"],
+            ga: ["City of Ekurhuleni", "City of Johannesburg Metropolitan", "Emfuleni Local", "Lesedi Local", "Other"]
+            }
+            function changeMunicipality(value) {
+                if (value.length == 0) document.getElementById("municipality").innerHTML = "<option></option>";
+                else {
+                    var catOptions = "";
+                    for (categoryId in pronvicesByCategory[value]) {
+                        catOptions += "<option>" + pronvicesByCategory[value][categoryId] + "</option>";
+                    }
+                    document.getElementById("municipality").innerHTML = catOptions;
+                }
+            }
+        </script>
     </body>
 </html>
