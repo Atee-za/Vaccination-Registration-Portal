@@ -7,6 +7,6 @@ const blogSchema = new Schema({
 
 }, {timestamps: true});
 
-const Blog = mongoose.model('B5_Appointments', blogSchema);
+const Blog = mongoose.model('Appointments', blogSchema);
 
 module.exports = Blog;

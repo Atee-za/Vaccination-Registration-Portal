@@ -12,6 +12,6 @@ const personalI = new Schema({
 }, {timestamps: true});
 
 
-const personalInfo = mongoose.model('B2_Personal_Info', personalI);
+const personalInfo = mongoose.model('Personal_Information', personalI);
 
 module.exports = personalInfo;

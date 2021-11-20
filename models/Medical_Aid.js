@@ -7,6 +7,6 @@ const blogSchema = new Schema({
     
 }, {timestamps: true});
 
-const Blog = mongoose.model('B7_Medical_Aid', blogSchema);
+const Blog = mongoose.model('Medical_Aid', blogSchema);
 
 module.exports = Blog;

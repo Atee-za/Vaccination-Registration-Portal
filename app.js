@@ -1,14 +1,12 @@
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose')
-const Blog = require('./models/B0_Age');
 
-const Blog2 = require('./models/B2_Personal');
-const Blog3 = require('./models/B3_Contact');
-const Blog4 = require('./models/B4_Address');
-const Blog5 = require('./models/B5_Appointment');
-const Blog6 = require('./models/B6_Aid.js');
-const Blog7 = require('./models/B7_M_Aid');
+const Blog2 = require('./models/Personal');
+const Blog3 = require('./models/Contact');
+const Blog4 = require('./models/Address');
+const Blog5 = require('./models/Appointment');
+const Blog7 = require('./models/Medical_Aid');
 
 const app = express();
 
