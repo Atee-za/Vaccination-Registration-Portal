@@ -1,19 +1,32 @@
 <!-- NavBar -->
-<nav class="navbar navbar-light " style="background-color: rgb(48, 124, 33);">
+<nav class="navbar navbar-light " style="background-color: rgb(61, 124, 49);">
   <span class="navbar-text" style="color: azure; margin: auto; text-align: center;">
     <h3>South African COVID-19 Vaccination Programme Registration</h3>
   </span>
   <form class="form-inline">
     <div class="container">
-     <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color: rgb(17, 80, 5);">English</button> -->
+     <!-- *commented*<button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color: rgb(17, 80, 5);">English</button>-->
       <div class="navbar-nav">
         <div class="input-group mb-3" >
-          <select required class="form-control " name="language" style="width: 100px;">
-          <option value="en">English</option>
-          <option value="am">Afrikaans</option>
-          <option value="bmf">IsiXhosa</option>
-          <option value="cmp">IsiZulu</option>
-          </select>
+          <button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#languageModal">Language</button>
+          <div class="modal fade" id="languageModal" tabindex="-1" aria-labelledby="labels" aria-hidden="true"> 
+            <div class="modal-dialog"> 
+              <div class="modal-content"> 
+                <div class="modal-header"> 
+                  <h5 class="modal-title" id="labels">Select Language</h5> 
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> 
+                </div> 
+                <div class="modal-body">
+                  <a id="btnEnglish" href="/" class="btn btn-outline-primary container-fluid mb-2" role="button" style="width: 50%;">English</a>
+                  <a id="btnAfrikaans" href="/" class="btn btn-outline-primary container-fluid mb-2" role="button" style="width: 50%;">Afrikaans</a>
+                  <a id="btnIsiXhosa" href="/" class="btn btn-outline-primary container-fluid" role="button" style="width: 50%;">IsiXhosa</a>
+                </div> 
+                  <div class="modal-footer"> 
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                </div> 
+              </div> 
+            </div> 
+          </div>
         </div>
       </div>
     </div>

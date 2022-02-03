@@ -9,6 +9,8 @@
     <!-- Include NavBar -->
     <%- include("./partials/nav") %>
 
+   
+
     <!--Jumbotron-->
 
     <section class="main-container" style="margin-top: 10px;">
@@ -44,14 +46,15 @@
           <div class="col-sm-4 container-fluid">
             <div class="input-group ">
               
+            <div class="form-floating">
+              <select class="form-select" name="age" id="age"  onchange=getSelectValue()>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+              <label for="age">Are you 18 years or older?</label>
+              <p class="form-label">Tap the box above to make a choice</p>
+            </div>
             
-            <label for="age">Are you 18 years or older?</label>
-            <select class="form-select" name="age" id="age"  style="width: 750px; height: 45px;" onchange=getSelectValue()>
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </select>
-            <p class="navbar-text">Tap the box above to make a choice</p>
-
           </div>
           <div class="container mb-5">
             <div> 

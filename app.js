@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const i18n = require('i18n');
 
 const Blog2 = require('./models/Personal');
 const Blog3 = require('./models/Contact');
@@ -9,6 +10,14 @@ const Blog5 = require('./models/Appointment');
 const Blog7 = require('./models/Medical_Aid');
 
 const app = express();
+
+i18n.configure({
+  locales: ['en', 'af', 'xh'],
+  cookie: 'lang',
+  directory: __dirname + '/locales'
+});
+
+app.use(i18n.init);
 
 //connect to database
 var mongoDB = 'mongodb+srv://athi:athi2021@cluster0.ious3.mongodb.net/Vaccination_Registration_Portal?retryWrites=true&w=majority';
